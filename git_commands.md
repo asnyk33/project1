@@ -33,6 +33,7 @@ git restore --staged *
 git restore --staged plik.txt
 git restore --staged folder/
 
+
 # remote
 git remote -v
 git remote add origin https://github.com/asnyk33/project1.git
