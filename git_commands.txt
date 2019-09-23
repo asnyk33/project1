@@ -1,0 +1,86 @@
+# config & sys commands :smile:
+
+git config --global user.name "asnyk33"
+git config --global user.email "asnyk33"
+
+# basics
+clear
+
+# init
+git init
+
+# file
+echo ">		= overwrite"	> plik.txt
+echo ">> 	= append"	>> plik.txt
+
+
+# dir
+pwd
+mkdir dir1
+mkdir -p dir1/subdir1
+rm plik1.txt
+rm -r dir1
+mv dir1/plik1 dir2/plik1
+mv dir1/plik1 dir2/plik1_new
+cp dir1/plik1 dir2/plik1
+
+# commit
+git commit -m "Komentarz"
+
+# fetch >> 
+git fetch origin master
+git fetch origin HEAD
+
+# pull
+git pull origin master
+git pull origin HEAD
+
+# push
+git push origin master
+git push origin HEAD
+
+# staging
+
+git add *
+git add plik.txt
+git add folder/
+git restore --staged *
+git restore --staged plik.txt
+git restore --staged folder/
+
+
+# remote
+git remote [-v | --verbose]
+git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=<fetch|push>] <name> <url>
+git remote rename <old> <new>
+git remote remove <name>
+
+git remote -v
+git remote add origin https://github.com/asnyk33/project1.git
+git remote rename <old> <new>
+
+# diff
+git diff <name>					>> aktywna vs podana
+git diff <name1> <name2>
+git diff --name-status <name1> <name2>		>> poka¿ tylko pliki, które siê ró¿ni¹
+git diff <name_local> <name_remote>			>> master local vs master remote
+
+# branch
+git branch --list			>> lista ga³êzi
+git branch -d <name>			>> usuwanie soft
+git branch -D <name>			>> usuwanie hard
+git push <remote_name> --delete <branch_name>
+git push <remote_name> :<branch_name>
+git branch -a				>> wyœwietla ga³êzie local i remote
+
+# stash
+git stash
+git stash list
+git stash pop
+git stash apply <name>
+git stash drop <name>
+
+# log
+git log
+git log --graph
+git log --pretty=format:"%h %s" --graph
